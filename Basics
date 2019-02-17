@@ -25,4 +25,9 @@ docker rm -f contanername or id
 #to stop a container 
 docker stop containername
 
-
+#Mounting volumes for container
+docker volume ls  #lists all the local volumes
+docker volume prune # delete all the unused volumes
+docker run -d -p 5432:5432 -v postgres-data:/var/lib/postgressql/data --name postgres1 postgres #creating mounted container volumes
+createdb -U postgres mydb
+# psql -U postgres mydb
