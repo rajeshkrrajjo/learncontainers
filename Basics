@@ -1,0 +1,14 @@
+#Running basic docker commands and its output
+#To list down all the images locally
+docker images
+
+#To run a container from images in background mode (port-- hostport:containerport)
+docker run -d -p 6379:6379 --name redis1 redis
+
+#To know which conatiners are running run the below cmd
+docker ps
+docker ps -a
+
+#To know the logs of container
+docker logs containername
+
