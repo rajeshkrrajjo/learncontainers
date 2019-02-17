@@ -12,3 +12,17 @@ docker ps -a
 #To know the logs of container
 docker logs containername
 
+#To run a conatiner in execute or inetractive mode and run redis-cli on redis container
+docker exec -it redis1 sh
+redis-cli
+
+#To link two containers for example creating two redis images
+docker run -it --link redis1:redis --name client1 redis sh
+
+#To delete a container
+docker rm -f contanername or id
+
+#to stop a container 
+docker stop containername
+
+
